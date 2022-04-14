@@ -65,7 +65,7 @@ public class Main {
 
     // method to create a JSON file and write data there
     private static void listToJson(List<Employee> employeeList, String tojson) {
-        try (Writer file = new FileWriter(tojson, true)) {
+        try (Writer file = new FileWriter(tojson, false)) {
             Gson gson = new GsonBuilder()
                     .setPrettyPrinting()
                     .create();
